@@ -1,0 +1,349 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*co dãn của web*/
+.container{
+    max-width:  960px;
+    margin: 0px auto;  /*căn giữa 2 bên*/
+
+}
+#header{
+    background-color: #131921; /*màu menu*/
+}
+nav{
+    display:flex; /*chỉnh thành cùng 1 hàng*/
+    justify-content:space-between; /*căn ra 2 bên*/
+    justify-items:center;/*căn vào giữa*/
+}
+.logo{
+    height: auto;
+    padding: 8px 0px; /* căn trên dưới trái phải logo*/
+}
+.main-menu{
+    display: flex; /*căn các tab con thành 1 hàng*/
+    list-style: none;/*bỏ dấu chấm trc các link href*/
+    margin: 0;
+    padding: 0;
+}
+.main-menu li{
+    position: relative;
+}
+.main-menu li a{
+    color:#fff;
+    display:block;
+    padding: 18px 20px;
+    text-decoration: none; /*xóa phần gạch trên dưới đường href*/
+}
+.main-menu ul.sub-menu{
+    position: absolute;
+    background: #131921e7;
+    padding: 15px 0px;
+    list-style: none;
+    width:200px; /*kéo dài menu con */
+    border: 1px solid #aca6a6;
+    display: none;
+}
+.main-menu li:hover>ul.sub-menu{    
+    display: block;
+}
+.main-menu ul.sub-menu a{
+    padding: 8px 15px;
+    border-bottom: 1px solid #727070;
+    left:0;
+}
+.main-menu ul.sub-menu li:hover>a{
+    border-bottom: 1px solid #ebe4e4;
+}
+.main-menu ul.sub-menu li:last-child a{ /*bỏ phần dư của menu con*/
+    border: none;
+}
+.main-menu ul.sub-menu ul.sub-menu{ /*căn chỉnh các menu con của sp*/
+    left: 199px;
+    top: -16px;
+}
+/*hiệu ứng chọn trên thanh menu*/
+.main-menu>li>a{        
+    position: relative;
+}
+.main-menu>li>a::before{
+    content: "";
+    height:4px;
+    width:0px;
+    background-color: red;
+    position: absolute;
+    bottom: 0px;
+    left:0px;
+    display: block;
+} /*hiệu ứng đỏ hiện lên*/
+.main-menu>li:hover>a::before{
+    width: 100%;
+}
+
+/*main*/
+
+
+main{
+    max-width:  1256px;
+    margin: 0px auto;
+    padding: 20px;
+    min-height: 100vh;   /*chiều cao tối thiểu của phần main 100vh là 100% chiều cao khung hình(toàn bộ màn hình) */
+    
+} 
+.banner{
+    padding: 20px; /*căn trên dưỡi của banner*/
+    
+}
+.danhsachsanpham{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    padding:20px;
+}
+.thongtin{
+    text-align: center; /*căn giữa*/
+    padding:20px; /*khoảng các trên dưới của tiêu đề*/
+}
+.sanpham a{
+    color: black; /*tên sản phẩm màu đen*/
+    text-decoration: none;
+}
+.sanpham a:hover{     
+    color: red;  /*hiệu ứng chuyển màu khi chọn vào sản phẩm*/
+} 
+/*tao khung cho sản phẩm*/
+.sanpham{
+    width: 250px;
+    background-color: #fff;
+    border: 2px solid #000000;  /* Viền dày 2px và màu xanh */
+    border-radius: 10px;         /* Bo góc cho viền */
+    overflow: hidden;            /* Đảm bảo các phần tử bên trong không tràn ra ngoài viền */
+    padding: 10px;   
+}
+.tensanpham{
+    font-size: 14px; /*cỡ chữ*/
+}
+.gia{
+    display:flex /*chỉnh thành 1 hàng*/
+    justify-content:space-between; /*căn 2 bên */
+}
+
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    font-family: Arial, sans-serif; /*phông chữ*/
+    bottom:0;
+
+
+    margin-top: auto;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    width: 30%;
+}
+
+.footer-section h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+    color: #f1c40f;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section a {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section li {
+    margin-bottom: 5px;
+}
+
+.footer-section a {
+    text-decoration: none;
+    color: #ddd;
+}
+
+.footer-section a:hover {
+    color: #f1c40f;
+}
+
+.social-media a {
+    margin-right: 10px;
+    display: inline-block;
+    color: #ddd;
+}
+
+.social-media a:hover {
+    color: #f1c40f;
+}
+/*  footer dưới cùng hiển thị thông tin bản quyền của web */
+.footer-bottom {
+    text-align: center; /*căn giữa*/
+    padding: 15px 0; /*khoảng cách trên dưới là 15 px*/
+    font-size: 0.8em; /*kích cỡ*/
+    color: #999;  /*màu*/
+    border-top: 1px solid #444;  /*bo viền: độ giày và màu sắc*/
+    margin-top: 20px;
+}
+
+/*co dãn trang web phù hợp với mọi tỉ lê màn hình*/
+
+@media (max-width:768px){
+    
+    main{
+        width:auto;
+    }
+    .thongtin{
+        font-size: 20px;
+    }
+    .danhsachsanpham{
+        grid-template-columns: 1fr; /* Khi màn hình nhỏ, chuyển thành một cột */
+    }
+    .sanpham{
+        width:505;
+
+    }
+    footer{
+        width:auto; /*tự độ điều chỉnh kích thước*/
+    }
+}
+
+
+
+/*ttsanpham*/
+.product-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin-top: 20px;
+    /*tes*/
+    gap:20px;
+  }
+  
+  /* Bố cục của sản phẩm */
+  .thongtinsanpham {
+    display: flex;                                 /*hiển thị các mục theo chiều ngang*/
+    background-color: #fff;                      /*màu sắc bên trong khung*/
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);   /*đổ bóng viền ngoài*/
+    border-radius: 8px;
+    overflow: hidden;
+    width: 900px;
+    padding: 20px;
+    justify-content: space-between;
+  }
+  
+  /* Phần hình ảnh sản phẩm */
+  .anhsanpham{
+    flex:1;
+    border-right: 1px solid #000000;    /*tao đường kẻ ngan cách giữa ảnh sản phầm và thông tin sản phẩm*/
+  }
+  /**/
+  .anhsanpham img {
+    width: 100%;        /*kích cỡ ảnh*/
+    max-width: 400px;   
+    height: auto;       /*chiều cao*/
+    border-radius: 8px;
+    max-width: 100%;
+  }
+  
+  /* Phần thông tin chi tiết sản phẩm */
+  .thongtinchitietsanpham {
+    padding-left: 20px;
+    flex: 1;
+    padding: 20px;
+  }
+  
+  /* Tiêu đề sản phẩm */
+  .tieudesanpham {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  /* Giá sản phẩm */
+  .giasanpham {
+    display:flex;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Mô tả ngắn về sản phẩm */
+  .mota {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  /* Phần thông số kỹ thuật */
+  .thongsokythuat h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .thongsokythuat ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .thongsokythuat li {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 8px;
+  }
+  
+  .thongsokythuat li strong {
+    color: #007bff;
+  }
+  
+  /* Nút mua */
+  .buy-button {
+    background-color: #ff0000;
+    color: white;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    
+  }
+  
+  .buy-button:hover {
+    background-color: #ff5c5c;
+  }
+
+/*thongtinsanpham*/
+.thongtinsanpham{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    margin-top: 20px;
+    
+}
+
